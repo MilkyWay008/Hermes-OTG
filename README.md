@@ -171,7 +171,7 @@ Start chatting. Carry it to another machine — plug in, launch, continue. Your 
 
 ## 🆘 Built for Serious Work: IT system Rescue
 
-**Plug it in. Launch it. You have an IT admin agent ready to work.** From the moment OTG Hermes starts, you have eyes and hands on the machine — windows-mcp + 31 Sysinternals tools, PowerShell, file system, registry, browser, and a harness built for serious system work. No setup, no config, no waiting: just ask.
+**Plug it in. Launch it. You have an IT admin agent ready to work.** From the moment OTG Hermes starts, you have eyes and hands on the machine — windows-mcp + 31 Sysinternals tools, PowerShell, file system, registry, browser, and a harness built for serious system work. No setup, no config, no waiting: just ask. It's perfect to go with Hiren's BootCD, MediCat USB, UBCD, Windows-to-Go (WTG), etc.
 
 ### 🆘 Use Case 1 — Rescue a broken installed Hermes (the flagship)
 
@@ -199,11 +199,11 @@ That's the difference between a "portable toy" and a **portable smart layer for 
 
 **📁 See it in action — real rescues from the sample folder:**
 
-> **🖥️ [Local fix: VMware VM failure & recovery](sample-%20IT%20system%20rescue%20reports/OTG%20IT-agent%20Local%20fix%20Report-%20%20VMware%20VM%20failure%20%26%20recovery.md)** — a crashed VM brought back from diagnose to fix, in minutes instead of hours.
+> **🖥️ [VMware VM failure & recovery](sample-%20IT%20system%20rescue%20reports/OTG%20IT-agent%20Local%20fix%20Report-%20%20VMware%20VM%20failure%20%26%20recovery.md)** — a crashed VM brought back from diagnose to fix, in minutes instead of hours.
 >
-> **🌐 [Remote fix: WSL failure & recovery after Windows Update](sample-%20IT%20system%20rescue%20reports/OTG%20IT-agent%20Remote%20fix%20Report-%20WSL-failure-%26-recovery-after-windows-update.md)** — WSL dead after an update, remotely diagnosed and restored without touching the host's broken install.
+> **🌐 [WSL failure & recovery after Windows Update](sample-%20IT%20system%20rescue%20reports/OTG%20IT-agent%20Remote%20fix%20Report-%20WSL-failure-%26-recovery-after-windows-update.md)** — WSL dead after an update, remotely diagnosed and restored without touching the host's broken install.
 
-These are real-life system rescues that normally take **hours or days** of troubleshooting — completed (diagnose → fix) in **5–15 minutes** by OTG Hermes.
+These are real-life system rescues that normally take **hours or days** of troubleshooting — completed (diagnose → fix) in **5–20 minutes** by OTG Hermes agent.
 
 ---
 
@@ -379,7 +379,7 @@ Where Hermes OTG goes next:
 
 ## 🔍 Search Keywords
 
-`Hermes OTG` · `OTG Hermes` · `portable hermes` · `hermes agent portable` · `hermes usb` · `USB AI agent` · `portable AI agent` · `no install AI agent` · `zero install` · `green package` / `绿色版` · `USB bundle` / `U盘版` · `portable bundle` / `便携版` · `Windows portable` · `Windows To Go` · `hermes desktop portable` · `side-by-side hermes` · `IT rescue USB` · `Sysinternals AI agent` · `MCP portable` · `offline AI agent`
+`Hermes OTG` · `OTG Hermes` · `OTG` · `portable hermes` · `hermes agent portable` · `hermes usb` · `USB AI agent` · `portable AI agent` · `no install AI agent` · `zero install` · `green package` / `绿色版` · `USB bundle` / `U盘版` · `portable bundle` / `便携版` · `Windows portable` · `Windows To Go` · `Windows-to-Go` · `WTG` · `hermes desktop portable` · `side-by-side hermes` · `IT rescue USB` · `Sysinternals AI agent` · `MCP portable` · `offline AI agent` · `Hiren's BootCD` · `Hiren` · `BootCD` · `MediCat USB` · `MediCat` · `Ultimate Boot CD` · `UBCD` · `FalconFour’s Ultimate Boot CD` · `Hermes rescue` · `system rescue` 
 
 ---
 
