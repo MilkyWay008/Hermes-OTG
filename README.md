@@ -24,11 +24,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest"><img src="https://img.shields.io/badge/Download_Latest_Release-2EA043?style=for-the-badge" alt="Download Latest Release"></a>
-</p>
-
-<p align="center">
-  <strong>📦 <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest">Download the latest release</a></strong> — v1.0.0 [H-v0.19.0] (Windows) — no install, just unzip and run.
+| 📦 <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest"><img src="https://img.shields.io/badge/Download_Latest_Release-2EA043?style=for-the-badge" alt="Download Latest Release"></a> |  — v1.0.0 [H-v0.19.0] (Windows) — no install, just unzip and run. |
 </p>
 
 ---
@@ -115,7 +111,7 @@ We researched the ecosystem before building. There are at least **6 other public
 | **Offline** deployable (no first-run download) | ❌ Most download upstream at first run | ✅ **Fully bundled** — works without internet |
 | Zero-install, zero host pollution | ⚠️ Mixed | ✅ **Yes** — no registry, no `~/.hermes`, no admin |
 | Bundled FastMCP / FastAPI / CLI-Anything | ❌ No | ✅ **Yes** |
-| Bundled windows-mcp + Sysinternals rescue tools | ❌ No | ✅ **Yes** (28 tools) |
+| Bundled windows-mcp + Sysinternals rescue tools | ❌ No | ✅ **Yes** |
 | TUI **and** Desktop **and** Gateway modes | ⚠️ One or two | ✅ **All three** |
 | Specialized skills/harness for serious tasks | ❌ No | ✅ **Yes** |
 
@@ -126,7 +122,7 @@ We researched the ecosystem before building. There are at least **6 other public
 ## ⚡ Quick Start
 
 ### 1. Get the release
-Download the latest **Hermes OTG** release (`.rar`). Extract **anywhere** — a USB stick, external drive, or a plain folder. Do *not* need to run an installer.
+<strong>📦 <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest">Download the latest **Hermes OTG** release (`.rar`) here.</a></strong>  Extract **anywhere** — a USB stick, external drive, or a plain folder. Do *not* need to run an installer.
 
 ### 2. Launch
 Double-click the launcher for the mode you want:
