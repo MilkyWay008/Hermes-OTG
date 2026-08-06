@@ -1,0 +1,59 @@
+# Hermes OTG — configuration
+# HERMES_HOME is set to <package>/data/ by start.cmd
+# All paths are relative to that data/ directory unless otherwise specified.
+
+model:
+  provider: openrouter
+  default: deepseek/deepseek-v4-flash
+fallback_providers:
+  - model: qwen/qwen3.5-flash-02-23
+    provider: openrouter
+  - model: deepseek-v4-flash
+    provider: deepseek
+  - model: deepseek-ai/deepseek-v4-flash
+    provider: nvidia
+
+agent:
+  max_turns: 100
+
+terminal:
+  backend: local
+  cwd: '../workspace/'
+
+web:
+  backend: ddgs
+  search_backend: ddgs
+  extract_backend: native    # web-native's provider name — REQUIRED, else extract falls back to ddgs (search-only)
+
+plugins:
+  enabled:
+    - web-native     # keyless trafilatura extraction
+    - web-ddgs       # keyless DuckDuckGo search
+
+memory:
+  memory_char_limit: 50000
+  user_char_limit: 50000
+
+delegation:
+  max_concurrent_children: 5
+  max_spawn_depth: 2
+  orchestrator_enabled: true
+  subagent_auto_approve: false
+  max_async_children: 15
+
+platforms:
+  api_server:
+    enabled: true
+    extra:
+      host: 127.0.0.1
+      port: 7642
+
+# MCP servers
+mcp_servers:
+#  windows-mcp:
+#    command: ../mcp_servers/windows-mcp/.venv/Scripts/python.exe
+#    args: ["-m", "windows_mcp", "serve"]
+#    enabled: true
+
+# Gateway is OFF by default in OTG mode (HERMES_OTG=1).
+# Start it explicitly: Hermes-OTG.exe gateway run

@@ -1,0 +1,30 @@
+# Backup files (Hermes hard rule: .bak before editing)
+*.bak
+*.bak-*
+
+# Heavy runtime — NOT in repo (see PACKAGE-STRUCTURE.md; full package ships in Releases RAR)
+dependencies/
+git/
+Hermes-OTG/
+desktop-app/
+mcp_servers/
+data/node/
+data/hermes-agent/
+data/state/
+data/sessions/
+data/logs/
+data/audio_cache/
+data/image_cache/
+data/temp/
+data/pairing/
+data/response_store.db
+data/gateway_state.json
+data/memories/
+
+# Scratch
+temp/
+workspace/
+
+# Caches & runtime DBs (not source)
+data/skills/index-cache/
+data/cron/*.db

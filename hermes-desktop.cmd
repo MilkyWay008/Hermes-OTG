@@ -1,0 +1,64 @@
+@echo off
+REM Hermes OTG - Desktop GUI Launcher
+REM Launches the Hermes-OTG Electron desktop app.
+REM The desktop app spawns the gateway itself (port 7642) and
+REM waits for it to be ready before connecting.
+
+setlocal enabledelayedexpansion
+
+set "SCRIPT_DIR=%~dp0"
+if "%SCRIPT_DIR:~-1%"=="\" set "SCRIPT_DIR=%SCRIPT_DIR:~0,-1%"
+set "HERMES_HOME=%SCRIPT_DIR%\data\"
+set "HERMES_OTG=1"
+set "API_SERVER_PORT=7642"
+set "API_SERVER_KEY=WtHOANYdb5uJesFphXrf47KGxokz0ilR6MCmDg9cwZByTv2ELPqIUaj3SQ1nV8"
+set "HERMES_GIT_BASH_PATH=%SCRIPT_DIR%\git\bin\bash.exe"
+set "TERMINAL_CWD=%SCRIPT_DIR%\workspace"
+set "HERMES_DESKTOP_CWD=%SCRIPT_DIR%\workspace"
+set "HERMES_OTG_PYTHON=%SCRIPT_DIR%\data\hermes-agent\venv\Scripts\python.exe"
+set "VIRTUAL_ENV=%SCRIPT_DIR%\data\hermes-agent\venv"
+set "HERMES_LAZY_INSTALL_TARGET=%SCRIPT_DIR%\data\lazy-packages"
+
+REM ---- Bundled cua-driver (computer_use toolset) ----
+REM computer_use tools spawn cua-driver (stdio MCP) via HERMES_CUA_DRIVER_CMD
+REM (authoritative override; see tools/computer_use/cua_backend.py). Staged
+REM as dependencies\cua\cua-driver.exe (+ cua-driver-uia.exe UIAccess worker) by
+REM assemble-otg-package.sh from full-otg/otg-cua/.
+if exist "%SCRIPT_DIR%\dependencies\cua\cua-driver.exe" (
+    set "HERMES_CUA_DRIVER_CMD=%SCRIPT_DIR%\dependencies\cua\cua-driver.exe"
+) else (
+    echo [WARN] bundled cua-driver not found - computer_use tools unavailable
+)
+
+REM ---- Bundled browser stack (node + agent-browser + Chromium) ----
+REM browser_* tools need the agent-browser CLI (data\node is prepended to
+REM PATH by fix-otg-paths) and AGENT_BROWSER_EXECUTABLE_PATH pointing at
+REM the bundled Chrome. Glob the version dir so Chrome updates don't
+REM require editing this wrapper. (Two-step glob: Windows dir cannot
+REM wildcard a MIDDLE path component, i.e. "chrome-*\chrome.exe" fails
+REM with "syntax is incorrect" — glob the dir, then append chrome.exe.)
+for /f "delims=" %%d in ('dir /b /s /ad "%SCRIPT_DIR%\data\node\chromium\chrome-*" 2^>nul') do set "AGENT_BROWSER_EXECUTABLE_PATH=%%d\chrome.exe"
+if not defined AGENT_BROWSER_EXECUTABLE_PATH echo [WARN] bundled Chrome not found - browser tools unavailable
+
+REM ---- Clean stale runtime locks (from crashed/force-killed sessions) ----
+REM Without this, a stale gateway.lock with a dead PID blocks every future start.
+if exist "%HERMES_HOME%gateway.lock"    del /q "%HERMES_HOME%gateway.lock"
+if exist "%HERMES_HOME%gateway.pid"     del /q "%HERMES_HOME%gateway.pid"
+if exist "%HERMES_HOME%auth.lock"       del /q "%HERMES_HOME%auth.lock"
+if exist "%HERMES_HOME%state\gateway.heartbeat" del /q "%HERMES_HOME%state\gateway.heartbeat"
+if exist "%HERMES_HOME%logs\.__gateway.lock"    del /q "%HERMES_HOME%logs\.__gateway.lock"
+if exist "%HERMES_HOME%.models_dev_cache_*.tmp" del /q "%HERMES_HOME%.models_dev_cache_*.tmp"
+
+REM ---- OTG path/venv repair (idempotent; every launch) ----
+call "%SCRIPT_DIR%\dependencies\scripts\fix-otg-paths.cmd"
+
+echo.
+echo ========== Hermes OTG Desktop ==========
+echo Data dir: %HERMES_HOME%
+echo.
+echo Launching Hermes OTG Desktop (it will start its own gateway on port 7642)...
+echo Close the desktop application window to stop.
+echo.
+
+start "" "%SCRIPT_DIR%\desktop-app\Hermes-OTG-Desktop\Hermes-OTG.exe"
+pause
