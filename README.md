@@ -23,6 +23,14 @@
   <strong>Agent for agents · IT rescue kit · portable coding workspace</strong>
 </p>
 
+<p align="center">
+  <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest"><img src="https://img.shields.io/badge/Download_Latest_Release-2EA043?style=for-the-badge" alt="Download Latest Release"></a>
+</p>
+
+<p align="center">
+  <strong>📦 <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest">Download the latest release</a></strong> — v1.0.0 [H-v0.19.0] (Windows) — no install, just unzip and run.
+</p>
+
 ---
 
 ## 📑 Table of Contents
@@ -55,7 +63,7 @@ There are plenty of "portable Hermes" projects — most are **bootstrap launcher
 - 🧳 **A complete, offline-deployable Hermes** — full headless browser, computer use, MCP, skills, memory, everything — in one folder you can carry on a USB stick.
 - 🔄 **Hot-swappable** — move it to any folder, any drive (USB, HDD, `E:`, `I:`, `Z:` — doesn't matter). It just works. **Zero install.**
 - 🖥️ **Your choice of interface** — full-feature OTG Hermes Desktop, the classic TUI, or a lean Gateway/API server only.
-- 🆘 **Your IT rescue kit** — when your host-installed Hermes breaks (failed update, app conflict), OTG Hermes Desktop runs **side-by-side** with it to diagnose, troubleshoot, and fix.
+- 🆘 **Your IT rescue agentic kit** — when your host-installed Hermes breaks (failed update, app conflict), OTG Hermes Desktop runs **side-by-side** with it to diagnose, troubleshoot, and fix.
 - 🧠 **Equipped with special skills & harness** for serious tasks — coding, IT system repair, network ops — with **minimal drift**.
 
 ---
@@ -86,12 +94,12 @@ There are plenty of "portable Hermes" projects — most are **bootstrap launcher
 - **All standard Hermes skills pre-shipped** — the full library, ready.
 
 ### 🆘 Bundled for IT System Rescue & Network Ops
-- **windows-mcp pre-installed with 28 Sysinternals rescue tools** (PsExec, handle, procdump, accesschk, …).
-- **OTG-native MCP install skill (`otg-mcp`)** — add more MCP servers the portable way, using the bundled Python (never the host's).
+- **windows-mcp pre-installed with 31 Sysinternals rescue tools** (PsExec, handle, procdump, accesschk, …).
+- **OTG-native MCP install skill (`otg-mcp`)** — add more MCP servers the **portable way**, using the bundled Python (never the host's).
 - **`memory-index` skill** — memory housekeeping for long sessions.
 
 ### 🧠 Special Skills & Harness
-- Purpose-built skills and harness so the agent **excels at serious tasks with minimal drift** — coding, IT repair, and network operations that would stall a generic portable agent.
+- Purpose-built skills and specially prepared harness so the agent **excels at serious tasks with minimal drift** — coding, IT repair, and network operations that would stall a generic portable agent.
 
 ---
 
@@ -118,7 +126,7 @@ We researched the ecosystem before building. There are at least **6 other public
 ## ⚡ Quick Start
 
 ### 1. Get the release
-Download the latest **Hermes OTG** release (`.zip`). Extract **anywhere** — a USB stick, external drive, or a plain folder. Do *not* need to run an installer.
+Download the latest **Hermes OTG** release (`.rar`). Extract **anywhere** — a USB stick, external drive, or a plain folder. Do *not* need to run an installer.
 
 ### 2. Launch
 Double-click the launcher for the mode you want:
@@ -143,19 +151,19 @@ Start chatting. Carry it to another machine — plug in, launch, continue. Your 
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│                     Hermes OTG (any drive, any folder)          │
+│              Hermes OTG (any drive, any folder)                │
 │                                                                │
-│   hermes-desktop.cmd      hermes.cmd        hermes-gateway-     │
-│        │                     │               start.cmd          │
-│        ▼                     ▼                    ▼             │
+│   hermes-desktop.cmd      hermes.cmd        hermes-gateway-    │
+│        │                     │               start.cmd         │
+│        ▼                     ▼                    ▼            │
 │   ┌─────────────┐      ┌──────────┐      ┌──────────────┐      │
-│   │  FULL DESKTOP│      │   TUI    │      │  API SERVER  │      │
-│   │  (Electron)  │      │ (text UI)│      │   port 7642  │      │
+│   │ FULL DESKTOP│      │   TUI    │      │  API SERVER  │      │
+│   │ (Electron)  │      │ (text UI)│      │   port 7642  │      │
 │   └─────────────┘      └──────────┘      └──────────────┘      │
-│        └──────────────┬───────────────┘                        │
-│                       ▼                                        │
-│              hermes.exe (PyInstaller,                           │
-│              self-contained, HERMES_HOME → data/)               │
+│         └────────────────────┬────────────────────┘            │
+│                              ▼                                 │
+│                 hermes.exe (PyInstaller,                       │
+│                 self-contained, HERMES_HOME → data/)           │
 └────────────────────────────────────────────────────────────────┘
 ```
 
@@ -165,29 +173,55 @@ Start chatting. Carry it to another machine — plug in, launch, continue. Your 
 
 ---
 
+## 🆘 Built for Serious Work: IT system Rescue
+
+**Plug it in. Launch it. You have an IT admin agent ready to work.** From the moment OTG Hermes starts, you have eyes and hands on the machine — windows-mcp + 31 Sysinternals tools, PowerShell, file system, registry, browser, and a harness built for serious system work. No setup, no config, no waiting: just ask.
+
+### 🆘 Use Case 1 — Rescue a broken installed Hermes (the flagship)
+
+> **Your host-installed Hermes desktop fails to run** — failed update? App conflict? Broken config?<br>
+> **Plug in OTG Hermes.** Launch **OTG Hermes Desktop** — it can even run *side-by-side* with the broken install (different mutex, different port, isolated data).<br>
+> **The OTG agent inspects the host install** — config, state.db, skills, gateway processes — using the bundled **windows-mcp + 31 Sysinternals tools** (PsExec, handle, procdump, accesschk, …), **diagnoses the failure, and fixes it.** Your host agent is rescued.
+
+### 💽 Use Case 2 — Diagnose system & app failures on any machine
+
+> **"The disk on this windows server is failing — check SMART status, find what's filling it, and tell me what to replace."**
+
+> **"This app can't connect to the network — trace why."**
+
+OTG Hermes reads event logs, checks disk health, runs network diagnostics (`Test-NetConnection`, DNS, services), inspects app configs and processes — and walks you to the root cause with diagnostic report & proposed fix ready (even fix it for you if you approve Hermes to do so). It's like having a sysadmin's toolkit that also *thinks*.
+
+### 🏛️ Use Case 3 — Infrastructure setup (domain / Active Directory / LDAP)
+
+> **"Set up the domain on this machine and join it to Active Directory."**
+
+> **"Connect this box to our LDAP directory."**
+
+OTG Hermes guides you through domain configuration, AD/LDAP connectivity, DNS, and authentication — step by step, verifying each stage with the bundled tools, so you're not guessing in front of a server console. With windows-mcp computer_use capability, with your approval, OTG Hermes can even do all the above *FOR* you.
+
+That's the difference between a "portable toy" and a **portable smart layer for every machine**.
+
+**📁 See it in action — real rescues from the sample folder:**
+
+> **🖥️ [Local fix: VMware VM failure & recovery](sample-%20IT%20system%20rescue%20reports/OTG%20IT-agent%20Local%20fix%20Report-%20%20VMware%20VM%20failure%20%26%20recovery.md)** — a crashed VM brought back from diagnose to fix, in minutes instead of hours.
+>
+> **🌐 [Remote fix: WSL failure & recovery after Windows Update](sample-%20IT%20system%20rescue%20reports/OTG%20IT-agent%20Remote%20fix%20Report-%20WSL-failure-%26-recovery-after-windows-update.md)** — WSL dead after an update, remotely diagnosed and restored without touching the host's broken install.
+
+These are real-life system rescues that normally take **hours or days** of troubleshooting — completed (diagnose → fix) in **5–15 minutes** by OTG Hermes.
+
+---
+
 ## 🛠️ Built for Serious Work: Coding
 
-Out of the box, Hermes OTG is a **portable agentic coding workstation**:
+Out of the box, with all followings bundled, Hermes OTG is a **portable agentic coding workstation**:
 
 - **FastMCP** — create and run MCP servers anywhere, no host install.
 - **FastAPI** — stand up local APIs for testing or tooling.
-- **CLI-Anything** — let the agent drive any CLI.
+- **CLI-Anything** — let the agent directly drive any CLI, and almost any apps in windows.
 - **Bundled Python 3.12 + PortableGit** — the terminal tool runs real bash and Python, all inside the folder.
 - **Full browser + computer-use toolset** — the agent can browse, automate, and operate like the full Hermes experience.
 
 > 💡 *"Serious agentic coding tasks on the go — without touching the host machine's Python, Node, or environment."*
-
----
-
-## 🆘 Built for Serious Work: IT Rescue
-
-The flagship use case:
-
-> **Your host-installed Hermes desktop fails to run** — failed update? App conflict? Broken config?<br>
-> **Plug in OTG Hermes.** Launch **OTG Hermes Desktop** — it runs *side-by-side* with the broken install (different mutex, different port, isolated data).<br>
-> **The OTG agent inspects the host install** — config, state.db, skills, gateway processes — using the bundled **windows-mcp + 28 Sysinternals tools** (PsExec, handle, procdump, accesschk, …), **diagnoses the failure, and fixes it.** Your host agent is rescued.
-
-That's the difference between a "portable toy" and a **portable smart layer for every machine**.
 
 ---
 
@@ -197,42 +231,43 @@ That's the difference between a "portable toy" and a **portable smart layer for 
 Upstream Hermes source (immutable)
         │
         ▼
-Patched for portability:
+Patched for OTG portability:
   • 17 hardcoded ~/.hermes path files → relative HERMES_HOME
   • 4 import-time path-caching bugs → dynamic resolution
   • Desktop app identity → com.nousresearch.hermes-otg (own mutex)
-  • Default API port → 7642 (vs installed 8642)
+  • Default API port → 7642 (vs installed 8642; avoid clash)
   • Gateway → OFF by default (HERMES_OTG env var gates it)
         │
         ▼
 PyInstaller --onedir build
         │
         ▼
-Hermes OTG portable folder (hermes.exe + data/ + mcp_servers/ + dependencies/)
+Hermes OTG portable folder (hermes*.cmd + data/ + desktop-app/ + Hermes-OTG/ + mcp_servers/ + dependencies/)
 ```
 
-**Why this matters:** other portable builds fix paths *at launch time* (rewrite `pyvenv.cfg`, regenerate trampolines). Hermes OTG fixes them *in the source* — so the binary is intrinsically portable. No setup phase, no repair step, no first-run download. **Instant, every time, from anywhere.**
+**Why this matters:** other portable builds fix paths *at launch time* (rewrite `pyvenv.cfg`, regenerate trampolines). Our Hermes OTG fixes them *in the source* — so the binary is **intrinsically portable**. No setup phase, no repair step, no first-run download. **Instant, every time, from anywhere.**
 
 ---
 
-## 📁 Folder Structure
+## 📁 Basic Folder Structure
 
 ```
 Hermes-OTG/
 ├── hermes-desktop.cmd        # Launch full desktop app (recommended)
 ├── hermes.cmd                # Launch TUI
 ├── hermes-gateway-start.cmd  # Launch API server only (port 7642)
-├── hermes.exe                # PyInstaller-built, self-contained
-├── config.yaml               # OTG-relative paths
-├── .env                      # API keys
-├── data/                     # ⚠️ [BACKUP THIS] Your agent's identity
-│   ├── SOUL.md               #   System prompt / personality
+├── data/                     # ⚠️ [BACKUP THIS] (excluding folder "node")
+│   ├── SOUL.md               #   System prompt / persona
 │   ├── state.db              #   Sessions & state
+│   ├── config.yaml           #   Hermes config
+│   ├── .env                  #   API keys
 │   ├── memories/             #   User profile, saved facts
 │   ├── skills/               #   User-installed skills (+ custom/)
 │   └── logs/
 ├── mcp_servers/              # MCP servers (installed per-machine, portable way)
 │   └── windows-mcp/          #   Pre-installed, 28 Sysinternals rescue tools
+├── Hermes-OTG                # PyInstaller-built, self-contained
+├── desktop-app				  # Hermes desktop app OTG patched, self-contained
 ├── dependencies/             # Bundled Python 3.12 + FastMCP/FastAPI/CLI-Anything
 ├── git/                      # Bundled PortableGit
 └── workspace/                # Default working folder
@@ -255,7 +290,7 @@ DEEPSEEK_API_KEY=sk-xxxxxxxxxxxxxxxx
 ```
 
 - **Models / tools / MCP servers** → `data\config.yaml`
-- **Personality** → edit `data\SOUL.md` (loaded fresh every message)
+- **Persona & Harness** → edit `data\SOUL.md` (loaded fresh every message)
 - **Config templates** → `data\config.yaml.template-*` and `data\.env.template-*` are clean starting points
 - **MCP servers** → add at `mcp_servers\<name>\` the OTG-native way (ask the agent, or load the `otg-mcp` skill). After adding to `config.yaml`, restart the app.
 
@@ -268,9 +303,8 @@ DEEPSEEK_API_KEY=sk-xxxxxxxxxxxxxxxx
 | Item | Requirement |
 |------|-------------|
 | OS | Windows 10 / 11 |
-| Install | **None** — run from any folder or USB drive |
+| Install | **None** — run from any folder / drive letter or USB drive |
 | Admin rights | **Not required** |
-| Disk footprint | ~200–300 MB (full suite) |
 | Dependencies on host | **Zero** (Python, Node, Docker all bundled) |
 | Internet | Only needed for API calls to your model provider (deployment itself is offline) |
 
@@ -281,14 +315,14 @@ DEEPSEEK_API_KEY=sk-xxxxxxxxxxxxxxxx
 Updates are **OFF by design** — this build is specially forked and patched for portability, so the in-app updater is disabled (each Hermes update would require the whole OTG bundle to be rebuilt).
 
 - To get the latest Hermes OTG, watch for a new release by **Ringo / MilkyWay008**, published shortly after major Hermes updates (e.g. v0.19 → v0.20 → v0.21).
-- OTG changes are tracked as git commits on an `otg-build` branch, replayed onto new upstream releases with `git rebase` — so updates stay reproducible.
+- OTG changes are tracked as git commits on an internal `otg-build` branch, replayed onto new upstream releases with `git rebase` — so updates stay reproducible.
 
 ---
 
 ## 🔒 Security Notes
 
 > [!WARNING]
-> **Your portable folder contains your identity.** `data/` holds your API keys (`.env`), personality (`SOUL.md`), and all session data (`state.db`, `memories/`). Treat it like a wallet: don't leave the USB stick lying around, and back it up.
+> **Your portable folder contains your identity.**  `data/` holds your API keys (`.env`), persona & harness (`SOUL.md`), and all session data (`state.db`, `memories/`). Treat it like a wallet: don't leave the USB stick lying around, and back it up.
 
 - **Zero host pollution** — no registry writes, no `~/.hermes`, no host app data touched. Remove the folder and nothing remains.
 - The bundled **free NVIDIA key** is for out-of-the-box testing only (~40 requests/min) — **not for production**. Use your own keys for real work.
