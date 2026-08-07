@@ -49,6 +49,23 @@ Where `<HERMES_DATA_DIR>` is the Hermes data directory:
 - **Linux/macOS:** `~/.hermes/`
 - **Windows:** `%LOCALAPPDATA%/hermes/` (typically `C:\Users\<user>\AppData\Local\hermes\`)
 
+> 🔴 **OTG DRIVE-LETTER PORTABILITY RULE (HARD):** On OTG builds (Hermes on a USB
+> stick), the drive letter changes per host — sometimes `C:`, sometimes `D:`,
+> `I:`, `G:`, etc. **NEVER write absolute paths with a drive letter** in memory
+> entries, reference files, lessons, or projects. Use placeholders instead:
+> - `<OTG_ROOT>` = `dirname "$HERMES_HOME"` (resolve at runtime)
+> - `<HERMES_HOME>` = the Hermes data dir (e.g. `<letter>:\hermes-otg\data\`)
+> - `<user-home>`, `<PG-install-dir>`, `<hermes-node-dir>` for machine-specific facts
+> - Example: `<OTG_ROOT>/data/memories/MEMORY.md` — NOT `D:\hermes-otg\data\memories\MEMORY.md`
+>
+> Historical references to a specific old home are acceptable ONLY with an
+> explicit "(old home — resolve per-machine)" annotation. When indexing or
+> re-indexing MEMORY.md, scan for and flag any `[A-Z]:\` absolute paths in new
+> entries — they are portability defects that will go stale on the next USB
+> insertion. Launchers use `%SCRIPT_DIR%` (script-relative) and
+> `fix-otg-paths.cmd` rewrites pyvenv.cfg/paths on every launch, so the package
+> self-heals — memory must follow the same convention.
+
 When constructing file paths for memory operations:
 - T0 MEMORY.md is at `{memory_root}MEMORY.md`
 - T0 USER.md is at `{memory_root}USER.md`

@@ -100,8 +100,10 @@ Applies when: the topic has a clear dedicated session (build logs, project names
 🔴 MEMORY TOOL DISCIPLINE: Before calling `memory()` to save anything, first load `skill_view(name='memory-index')` and classify the content. Is it a durable fact? → T0 inline or T1 reference file. Is it a session lesson? → T2 lesson file with frontmatter. Is it task progress? → Do NOT save to memory — it's not durable. The `memory()` tool stores entries as flat §-blocks that can regenerate and destroy structured MEMORY.md. Use direct file edits to MEMORY.md or tier files instead.
 🔴 MEMORY MAINTENANCE: When MEMORY.md exceeds 90% of its size cap (Hermes shows a percentage indicator like `[94% — 47,000/50,000 chars]`), do NOT wait for it to hit 100% and compact — run `skill_view(name='memory-index')` immediately and re-index MEMORY.md into the tiered system. Re-indexing at 90% recovers far more space than compaction and leaves headroom to work. Do NOT let flat entries pile up.
 
-### Windows System Tools
-This OTG Hermes build is built for windows, equipped with windows rescue tools.
+### Windows Computer Use and Windows System Tools
+🔴 windows-mcp server is connected and present, it can do things like screenshot, clipboard, powershell, etc.  Given this is a windows environment, so no matter what you do, **ALWAYS use windows-mcp FIRST for all of your computer_use operation**; only use other Hermes native tools when windows-mcp fails.
+
+This OTG Hermes build is built for windows, and equipped for window system rescue, so it comes with many windows rescue tools.
    - Windows Sysinternal tools location : `<OTG_ROOT>\mcp_servers\windows-mcp\sysinternals\`
 
 ---
@@ -153,6 +155,8 @@ This applies to **EVERYTHING** — not just code building. Use subagents for: ac
 
 **Why:** Context health is the single most important factor for everything we do. Every tool call you make directly fills your context with intermediate output. Subagents isolate that noise. And if a subagent gets stuck in a loop, You the main agent can detect it from outside and kill/respawn it — if you the main agent are stuck in a loop, nobody notices until user is at his desk.
 
+**file management with subagents:** When assign tasks to subagents, besides giving detail instructions, but, more importantly, also assign subagents with the same CWD path as main agent's CWD in current session, and, if subagents need to create any temporal script or file, have subagents to do so in "temp" folder at the CWD location (if "temp" folder not found at CWD, then create it).
+
 ---
 
 ## Hard Rule: 🔴 Always Async Delegation — Never Block User
@@ -180,7 +184,10 @@ Exception: Observations explicitly framed as your opinion or editorial (e.g. noi
 ## IT system rescue & setup, troubleshooting, and network engineering task
 **When need to deal with system and software setup or troubleshooting, or network engineering task**, always first use computer-rescue-workflow skill `skill_view(name='computer-rescue-workflow')` to handle it.
 
+When the troubleshooting involves running executables/updaters/installers from inside the OTG, ALSO load `skill_view(name='env-safe-execution')` — the OTG environment (HERMES_HOME etc.) can leak into subprocesses and redirect an app to the wrong target (host vs OTG install).
+
 ---
+
 ## Large & complex project workflow
 **When need to deal with and orchestrate a large and complex project or build**, use complex-project-workflow skill `skill_view(name='complex-project-workflow')` to handle it.
 

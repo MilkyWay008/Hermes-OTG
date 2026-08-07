@@ -7,7 +7,7 @@ platforms: [windows]
 metadata:
   hermes:
     tags: [otg, windows, frozen-build, pyinstaller, cmd, crlf, execute_code, env]
-    related_skills: [otg-pip, otg-mcp, otg-web_extract, vmware-vm-crash-recovery]
+    related_skills: [otg-pip, otg-mcp, otg-web_extract, vmware-vm-crash-recovery, env-safe-execution]
 ---
 
 # OTG Windows Troubleshooting
@@ -21,6 +21,16 @@ The user runs a diagnose-first discipline (also in SOUL.md Hasty-Action Rule). *
 - Asked to investigate → investigate, report, propose. Do not modify.
 - Asked to fix → backup first (`.bak-YYYYMMDD-HHMM`), state exactly what you'll change, get agreement.
 - Every edit to a file that matters: make a backup copy first. No exceptions.
+
+## Companion Skill: Env-Safe Execution
+
+When troubleshooting Windows systems FROM inside the OTG and the work involves running
+executables (updaters, installers, CLIs, host-Hermes commands), ALSO load
+`skill_view(name='env-safe-execution')` as a companion — the OTG env
+(`HERMES_HOME=E:\...`) leaks into every subprocess spawned for host-machine work and can
+redirect an app to the wrong install. This is exactly how the host updater grabbed the OTG
+install (2026-08-06 incident): a subprocess inherited `HERMES_HOME` and the updater
+targeted E: instead of C:.
 
 ## Pitfall 1: CRLF Corruption — the #1 .cmd/.bat gotcha
 

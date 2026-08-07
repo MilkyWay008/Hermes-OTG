@@ -54,6 +54,11 @@ Follow them EVERY time.
 
 ## Session-specific playbooks
 
+- **Any rescue step that RUNS an executable** (updaters, installers, CLIs, anything
+  that reads env vars for paths/config) → ALSO load `skill_view(name='env-safe-execution')`
+  as a companion skill. The env-leak risk (HERMES_HOME etc. leaking into subprocesses)
+  applies to rescue scenarios — especially when a host install and the OTG coexist and the
+  agent is running from inside the OTG.
 - VMware VM won't boot after host crash → see `vmware-vm-crash-recovery`
   skill (delta disk repair via `vmware-vdiskmanager -R`). The `-R` command
   works on sparse delta disks; run it on the CURRENT delta from `.vmsd`.
