@@ -103,8 +103,7 @@ There are plenty of "portable Hermes" projects — most are **bootstrap launcher
 ## 🎬 See It In Action
 
 **🔀 Side-by-Side with your installed Hermes — survives drive-letter & folder change:**
-https://github.com/user-attachments/assets/8af218d0-cbc7-4959-a5e0-ba5d8176635e
-<video src="https://raw.githubusercontent.com/MilkyWay008/Hermes-OTG/main/assets/clips/drive-letter-folder-change.mp4" controls width="100%"></video>
+<video src="https://github.com/user-attachments/assets/8af218d0-cbc7-4959-a5e0-ba5d8176635e" controls width="100%"></video>
 
 ---
 
