@@ -33,6 +33,7 @@
 
 - [Why Hermes OTG?](#-why-hermes-otg)
 - [✨ Key Features](#-key-features)
+- [🎬 See It In Action](#-see-it-in-action)
 - [🏆 Not the first portable Hermes — but the first to do ALL of it](#-not-the-first-portable-hermes--but-the-first-to-do-all-of-it)
 - [⚡ Quick Start](#-quick-start)
 - [🖥️ Three Ways to Run](#️-three-ways-to-run)
@@ -96,6 +97,14 @@ There are plenty of "portable Hermes" projects — most are **bootstrap launcher
 
 ### 🧠 Special Skills & Harness
 - Purpose-built skills and specially prepared harness so the agent **excels at serious tasks with minimal drift** — coding, IT repair, and network operations that would stall a generic portable agent.
+
+---
+
+## 🎬 See It In Action
+
+| 🔀 **Side-by-Side With Your Installed Hermes** | 🧳 **Truly Portable — Survives Drive-Letter & Folder Change** |
+|:---:|:---:|
+| <video src="assets/clips/side-by-side.mp4" controls width="100%"></video> | <video src="assets/clips/drive-letter-folder-change.mp4" controls width="100%"></video> |
 
 ---
 
