@@ -102,9 +102,9 @@ There are plenty of "portable Hermes" projects — most are **bootstrap launcher
 
 ## 🎬 See It In Action
 
-| 🔀 **Side-by-Side With Your Installed Hermes** | 🧳 **Truly Portable — Survives Drive-Letter & Folder Change** |
-|:---:|:---:|
-| <video src="assets/clips/side-by-side.mp4" controls width="100%"></video> | <video src="assets/clips/drive-letter-folder-change.mp4" controls width="100%"></video> |
+**🔀 Side-by-Side with your installed Hermes — survives drive-letter & folder change:**
+
+<video src="assets/clips/drive-letter-folder-change.mp4" controls width="100%"></video>
 
 ---
 
