@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-| 📦 <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest"><img src="https://img.shields.io/badge/Download_Latest_Release-2EA043?style=for-the-badge" alt="Download Latest Release"></a> | — v1.0.1 [H-v0.19.0] (Windows) — no install, just unzip and run. |
+| 📦 <a href="https://github.com/MilkyWay008/Hermes-OTG/releases/latest"><img src="https://img.shields.io/badge/Download_Latest_Release-2EA043?style=for-the-badge" alt="Download Latest Release"></a> | v1.0.1 [H-v0.19.0] (Win10/11) — no install, just unzip & run. |
 </p>
 
 ---
