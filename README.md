@@ -5,8 +5,8 @@
 # <p align="center">🚀 Hermes OTG — The Portable Hermes Agent That Does *Everything*</p>
 
 <p align="center">
-  <strong>Full-featured Hermes Agent on a USB stick. Zero install. Zero host pollution.</strong><br>
-  Run it from any drive, any folder, any Windows 10/11 machine — as TUI, full Desktop app, or Gateway.<br>
+  <strong>Full-featured Hermes Agent on a USB stick. Zero install. Zero host pollution. Instant run.</strong><br>
+  Run it from any drive, any folder, any Windows 10/11 PC — as full Desktop app, TUI, or just Gateway.<br>
   <em>The only portable Hermes that runs side-by-side with your installed one.</em>
 </p>
 
