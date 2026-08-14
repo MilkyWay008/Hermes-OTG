@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/NousResearch/hermes-agent/main/assets/banner.png" alt="Hermes Agent banner" width="100%">
 </p>
 
-# <p align="center">🚀 Hermes OTG — The Portable Hermes Agent That Does *Everything*</p>
+# <p align="center">🚀 Hermes OTG — Your Pocket Agent System Rescue Companion</p>
 
 <p align="center">
   <strong>Full-featured Hermes Agent on a USB stick. Zero install. Zero host pollution. Instant run.</strong><br>
