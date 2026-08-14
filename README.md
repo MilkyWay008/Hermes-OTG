@@ -7,7 +7,7 @@
 <p align="center">
   <strong>Full-featured Hermes Agent on a USB stick. Zero install. Zero host pollution. Instant run.</strong><br>
   Run it from any drive, any folder, any Windows 10/11 PC — as full Desktop app, TUI, or just Gateway.<br>
-  <em>The only portable Hermes that runs <u>side-by-side</u> with your installed one.</em>
+  <em>The only portable Hermes that can run <b>side-by-side</b> with your installed one.</em>
 </p>
 
 <p align="center">
