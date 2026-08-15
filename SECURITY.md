@@ -26,7 +26,7 @@ Hermes-OTG is a **portable bundle** — it ships third-party executables so it c
 | Component | Upstream source | Role |
 |-----------|----------------|------|
 | **Hermes Agent** (Python runtime) | NousResearch/hermes-agent (official) | The agent itself |
-| **CPython 3.12** | python.org (official) | Embedded Python interpreter |
+| **CPython** | python.org (official) | Embedded Python interpreter |
 | **PortableGit** | git-scm.com (official) | Git operations inside the agent |
 | **Sysinternals Suite** (~31 tools) | learn.microsoft.com/sysinternals (Microsoft official) | Diagnostic / rescue tools (procmon, autoruns, etc.) |
 | **Python packages** (FastMCP, FastAPI, etc.) | PyPI (official registry) | Agent libraries |
