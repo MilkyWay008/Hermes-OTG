@@ -38,8 +38,24 @@ Hermes-OTG is a **portable bundle** — it ships third-party executables so it c
 
 ### Verification
 
-- **SHA256SUMS:** every release ships with a `SHA256SUMS` file listing the hash of the release archive (and, where practical, per-component hashes)
-- **Verify before use:** `sha256sum -c SHA256SUMS` on the downloaded artifact — if the hash does not match, do not run it and report it (see above)
+- **SHA256SUMS:** every release ships with a `SHA256SUMS` file listing the SHA-256 hash of the release archive. The file is committed to the repo root and also attached to the GitHub release. GitHub itself records the SHA-256 digest of every release asset (visible via the API/release page), which independently confirms the published hash.
+- **Verify before use** — if the hash does not match, do not run it and report it (see above):
+
+  **Linux / macOS:**
+  ```bash
+  # download the RAR + SHA256SUMS, then in the same folder:
+  sha256sum -c SHA256SUMS
+  # expected output: Hermes-OTG.v1.0.1.H-v0.19.0.win.rar: OK
+  ```
+
+  **Windows (no sha256sum built in):**
+  ```cmd
+  certutil -hashfile "Hermes-OTG.v1.0.1.H-v0.19.0.win.rar" SHA256
+  :: compare the printed hash against the value in SHA256SUMS:
+  :: 361eb7657d24f752fba531119a151429c101c00312199176aebaaaf4d8266915
+  ```
+
+  Current v1.0.1 hash: `361eb7657d24f752fba531119a151429c101c00312199176aebaaaf4d8266915`
 - **Pinned versions:** all bundled components are pinned to exact versions at build time (no floating/`latest` dependencies); the version manifest is documented in `PACKAGE-STRUCTURE.md`
 - **No code execution at build from unverified sources:** components are fetched only from the official upstreams listed above
 
